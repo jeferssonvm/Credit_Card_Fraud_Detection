@@ -1,1 +1,30 @@
+# ── Datos (van en Drive, no en GitHub) ─────────────────────────
 /data
+
+# ── Python ──────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# ── Entornos virtuales ──────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── Credenciales y secretos ─────────────────────────────────────
+.env
+.env.*
+*.pem
+*.key
+credentials*.json
+client_secret*.json
+
+# ── Sistema y editor ────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+*.log
