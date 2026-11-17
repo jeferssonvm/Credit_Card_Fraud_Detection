@@ -34,11 +34,12 @@ def train_model(data_dir, model_dir):
             eval_metric='logloss'
         ),
         param_distributions=parametros,
-        n_iter=20, 
+        n_iter=40, 
         scoring='f1',
         cv=3,
         verbose=1,
-        n_jobs=-1
+        n_jobs=-1,
+        random_state=42
     )
     
     # Ajuste del modelo utilizando validación cruzada 

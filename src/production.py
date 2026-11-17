@@ -2,6 +2,9 @@ import joblib
 import pandas as pd
 import os
 
+# Umbral escogido con el conjunto de validacion en 03_model.ipynb (celda 6)
+UMBRAL = 0.9798
+
 def make_prediction(new_data_path):
     # 1. Cargar el escalador y el modelo
     scaler = joblib.load('../models/robust_scaler.pkl') 
@@ -20,7 +23,7 @@ def make_prediction(new_data_path):
 
     # 5. Predicción  
     probs = model.predict_proba(data)[:, 1] 
-    predictions = (probs >= 0.3).astype(int) 
+    predictions = (probs >= UMBRAL).astype(int)
     
     return predictions
 if __name__ == "__main__":
